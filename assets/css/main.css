@@ -5,5 +5,39 @@ Main Style
 
 Created: October/2017 by Rachel Frazer
 -----------------------------------------------------------------------*/
+/*-----------------------
+
+Gerneral
+
+------------------------*/
+/*-----------------------
+
+Footer
+
+------------------------*/
+.fixed-footer {
+  width: 100%;
+  background-color: #fff;
+  position: fixed;
+  left: 0;
+  bottom: 0; }
+  .fixed-footer .footer-wrap {
+    padding: 20px 0px; }
+
+.footer-nav {
+  height: 54px;
+  line-height: 54px;
+  text-align: center; }
+  .footer-nav .item {
+    display: inline-block;
+    padding: 0px 15px;
+    text-transform: uppercase;
+    color: #6e747a;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+    font-weight: 500; }
+    .footer-nav .item a {
+      display: block;
+      color: #6e747a; }
 
 /*# sourceMappingURL=main.css.map */
