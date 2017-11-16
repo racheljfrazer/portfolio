@@ -5,9 +5,35 @@ Main Style
 
 Created: October/2017 by Rachel Frazer
 -----------------------------------------------------------------------*/
+body {
+  font-family: 'Work Sans', sans-serif;
+  font-size: 16px;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  min-width: 601px; }
+
+p {
+  letter-spacing: 0.2px; }
+
+img {
+  width: 100%; }
+
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor; }
+
 /*-----------------------
 
-Gerneral
+Colors
+
+------------------------*/
+/*-----------------------
+
+Header
 
 ------------------------*/
 /*-----------------------

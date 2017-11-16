@@ -2506,8 +2506,8 @@ nav ul a span.badge {
 
 .container {
   margin: 0 auto;
-  max-width: 1480px;
-  width: 90%;
+  max-width: 1068px;
+  width: 95%;
   padding: 0px 30px; }
 
 @media only screen and (min-width: 601px) {
