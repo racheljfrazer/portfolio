@@ -36,6 +36,87 @@ Colors
 Header
 
 ------------------------*/
+.site-header {
+  width: 100%;
+  height: 124px;
+  position: relative; }
+  .site-header .fixed-header {
+    width: 100%;
+    height: 124px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.8); }
+    .site-header .fixed-header .header-wrap {
+      padding: 30px 0px; }
+
+.navbar {
+  width: 100%;
+  position: relative;
+  height: 74px;
+  line-height: 74px; }
+  .navbar .monogram {
+    display: inline-block; }
+    .navbar .monogram a {
+      display: block;
+      cursor: pointer;
+      color: #000; }
+      .navbar .monogram a:hover, .navbar .monogram a:active {
+        color: #266574; }
+      .navbar .monogram a .monogram-icon {
+        font-size: 64px;
+        vertical-align: middle;
+        stroke-width: 1px; }
+  .navbar .main-menu {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    margin: 0; }
+    .navbar .main-menu li {
+      display: inline-block;
+      padding: 0px 20px; }
+      .navbar .main-menu li a {
+        display: block;
+        color: #191919;
+        cursor: pointer; }
+        .navbar .main-menu li a:hover, .navbar .main-menu li a:active {
+          color: #266574; }
+
+/*-----------------------
+
+Home
+
+------------------------*/
+.main-content {
+  margin-top: 40px; }
+
+.content-wrap {
+  padding: 60px 0px; }
+
+.lead-content {
+  width: 70%;
+  padding: 0px 30px; }
+  .lead-content .title {
+    padding-bottom: 20px; }
+    .lead-content .title h1 {
+      font-size: 40px;
+      line-height: 1.4; }
+      .lead-content .title h1 b {
+        display: block;
+        font-weight: 500; }
+  .lead-content p {
+    font-size: 20px;
+    line-height: 40px;
+    color: #266574; }
+
+.feature-list {
+  padding: 0px 20px; }
+  .feature-list .title h2 {
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    color: #b0b1b1;
+    letter-spacing: 0.8px; }
+
 /*-----------------------
 
 Footer
