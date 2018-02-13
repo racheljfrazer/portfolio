@@ -11,9 +11,10 @@
 //
 //  1. General
 //  2. Variables
-//  3. Navigation
-//  4. Showcase
-//  5. 
+//  3. Typography
+//  4. Navigation
+//  5. Showcase
+//  6. Headings
 
 
 
@@ -26,8 +27,8 @@
 body{
     font-family: 'Work Sans', sans-serif;
     font-size: 16px;
-    font-smoothing: antialiased;
     -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
     min-width: 601px;
 }
 
@@ -146,9 +147,42 @@ $mont: "Montserrat", Helvetica, san-serif;
         display: block;
         height: 0;
         clear: both;
-        visibilty: hidden;
+        visibility: hidden;
     }
 }
+
+//===================================
+
+//Typography
+
+//======================================================
+
+h1{
+    font-size: 2.6rem;
+    line-height: 1.4;
+    color: $darkGray;
+    b{
+        display: block;
+        font-weight: 500;
+    }
+}
+
+
+h2{
+    text-transform: uppercase;
+    font-weight: 500 !important;
+    color: #b0b1b1;
+    letter-spacing: 0.8px;
+}
+
+.subtitle{
+    color: $midGray;
+    margin-top: 0px;
+    font-size: 15px;
+    letter-spacing: 0.6px;
+    font-weight: 500;
+}
+
 
 //===================================
 
@@ -297,6 +331,10 @@ $mont: "Montserrat", Helvetica, san-serif;
     margin-top: 3rem;
 }
 
+.extra-padding-bottom{
+    padding-bottom: 3rem;
+}
+
 .main-wrapper{
     padding: 4rem 0;
 }
@@ -305,45 +343,16 @@ $mont: "Montserrat", Helvetica, san-serif;
     padding: 2rem 0;
 }
 
+.spacing{
+    padding: 2rem 0px;
+}
+
 .lead-content{
-    width: 70%;
-    padding: 0px 30px;
     .title{
         padding-bottom: 20px;
         h1{
-            font-size: 40px;
-            line-height: 1.4;
-            color: $darkGray;
-            b{
-                display: block;
-                font-weight: 500;
-            }
             em{
-                font-family: $mont;
-                font-style: normal;
-                position: relative;
-                overflow: hidden;
-                display: inline-block;
-                background-color: #fff;
-                color: transparent;
-                &:before{
-                    content: '';
-                    display: inline-block;
-                    width: 100%;
-                    height: 100%;
-                    position: absolute;
-                    @include translate(-100%, 0px);
-                    background: linear-gradient(45deg, $iconicBlue, #4be2fa);
-                }
-                &:after{
-                    content: '';
-                    display: inline-block;
-                    width: 100%;
-                    height: 100%;
-                    background-color: $darkGray;
-                    position: absolute;
-                    left: 0;
-                }
+                display: none;
             }
         }
     }
@@ -402,17 +411,52 @@ $mont: "Montserrat", Helvetica, san-serif;
 .feature-list{
     padding: 0px 20px;
     .title{
-        h2{
-            font-size: 14px;
-            text-transform: uppercase;
-            font-weight: 500;
-            color: #b0b1b1;
-            letter-spacing: 0.8px;
-        }
+        padding-bottom: 10px;
     }
 }
 
 .item-list{
+    .component{
+        margin-bottom: 35px;
+    }
+    .preview{
+        position: relative;
+        display: block;
+        cursor: pointer;
+        .image{
+            img{
+                display: block;
+            }
+        }
+        .overlay{
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            background-color: rgba($iconicBlue, 0.7);
+            .coding{
+                vertical-align: middle;
+                font-size: 80px;
+                color: #fff;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                @include translate(-50%, -50%);
+            }
+        }
+        &:hover{
+            .overlay{
+                display: block;
+            }
+            .image{
+                -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+            }
+        }
+    }
     .caption{
         padding: 15px 0px;
         h3{
@@ -431,5 +475,45 @@ $mont: "Montserrat", Helvetica, san-serif;
 }
 
 
+.notification{
+    text-align: center;
+    padding-bottom: 15px;
+    h5{
+        font-style: italic;
+        letter-spacing: 1px;
+        color: $liteGray;
+    }
+}
+
+.component{
+    padding: 30px 0px;
+}
+
+
+.img-holder{
+    padding: 20px 0px;
+    &.set-width{
+        text-align: center;
+        img{
+            width: auto;
+        }
+    }
+    img{
+        border: 1px solid $offWhite;
+        box-shadow: 0px 1px 3px 0px rgba(123, 131, 146, 0.2),  1px 0px 3px 0px rgba(123, 131, 146, 0.3);
+    }
+}
+
+.outline-btn{
+    display: inline-block;
+    border-radius: 2px;
+    border: 2px solid $iconicBlue;
+    padding: 14px 35px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
 
 
