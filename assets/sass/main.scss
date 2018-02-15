@@ -14,7 +14,7 @@
 //  3. Typography
 //  4. Navigation
 //  5. Showcase
-//  6. Headings
+//  6. Responsivness
 
 
 
@@ -30,10 +30,6 @@ body{
     -webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
     min-width: 601px;
-}
-
-p{
-    letter-spacing: 0.2px;
 }
 
 img{
@@ -68,6 +64,21 @@ $midGray: rgb(123,131,145);
 $darkGray: rgb(64,69,79);
 
 $mont: "Montserrat", Helvetica, san-serif;
+
+
+$small-screen-up: 601px !default;
+$medium-screen-up: 993px !default;
+$large-screen-up: 1201px !default;
+$small-screen: 600px !default;
+$medium-screen: 992px !default;
+$large-screen: 1200px !default;
+
+$medium-and-up: "only screen and (min-width : #{$small-screen-up})" !default;
+$large-and-up: "only screen and (min-width : #{$medium-screen-up})" !default;
+$extra-large-and-up: "only screen and (min-width : #{$large-screen-up})" !default;
+$small-and-down: "only screen and (max-width : #{$small-screen})" !default;
+$medium-and-down: "only screen and (max-width : #{$medium-screen})" !default;
+$medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width : #{$medium-screen})" !default;
 
 
 //===================================
@@ -149,6 +160,27 @@ $mont: "Montserrat", Helvetica, san-serif;
         clear: both;
         visibility: hidden;
     }
+}
+
+@mixin flex-center{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 //===================================
@@ -315,6 +347,47 @@ h2{
             font-size: 12px;
             letter-spacing: 0.8px;
         }
+    }
+}
+
+.pagination{
+    @include flex-center;
+    margin-bottom: 2rem;
+    .previous, .forward{
+        width: 50%;
+        padding: 0px 2rem;
+        a{
+            color: $midGray;
+            font-size: 1.2rem;
+            font-style: italic;
+            letter-spacing: 0.6px;
+            font-weight: 500;
+            cursor: pointer;
+            .icon-previous, .icon-forward{
+                vertical-align: middle;
+                margin-bottom: 4px;
+                position: relative;
+            }
+            &:hover{
+                color: $iconicBlue;
+                .icon-forward{
+                    right: -2px;
+                    color: $iconicBlue;
+                    stroke-width: 1px;
+                }
+                .icon-previous{
+                    left: -2px;
+                    color: $iconicBlue;
+                    stroke-width: 1px;
+                }
+            }
+        }
+    }
+    .previous{
+        text-align: right;
+    }
+    .forward{
+        text-align: left;
     }
 }
 
@@ -485,10 +558,52 @@ h2{
     }
 }
 
+.project-content{
+    .title{
+        h1{
+            color: $darkGray;
+            font-weight: 500;
+        }
+    }
+    .summary{
+        p{
+            font-size: 1.2rem;
+            color: $midGray;
+        }
+    }
+    .services{
+        li{
+            list-style-type: none;
+            color: $paleBlue;
+            font-weight: 500;
+            position: relative;
+            float: left;
+            padding: 0px 15px;
+            &:after{
+                content: '';
+                display: inline-block;
+                width: 2px;
+                height: 80%;
+                position: absolute;
+                right: 0;
+                top: 10%;
+                background-color: $paleBlue;
+            }
+            &:first-child{
+                padding-left: 0px;
+            }
+            &:last-child{
+                &:after{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 .component{
     padding: 30px 0px;
 }
-
 
 .img-holder{
     padding: 20px 0px;
@@ -504,16 +619,76 @@ h2{
     }
 }
 
+.site-access{
+    margin: 2rem 0px;
+    text-align: right;
+    padding: 0px 15px;
+}
+
 .outline-btn{
     display: inline-block;
     border-radius: 2px;
     border: 2px solid $iconicBlue;
+    background-color: #fff;
     padding: 14px 35px;
-    text-transform: uppercase;
-    letter-spacing: 0.4px;
     font-size: 14px;
-    font-weight: 500;
+    position: relative;
     cursor: pointer;
+    overflow: hidden;
+    span{
+        position: relative;
+        z-index: 2;
+        color: $iconicBlue;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.6px;
+    }
+    &:before, &:after{
+        content: '';
+        display: inline-block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    &:before{
+        background-color: #fff;
+        z-index: 1;
+    }
+    &:after{
+        @include transform(translate3d(-101%, 0, 0));
+        @include transition(all 0.2s cubic-bezier(.17,.67,.83,.67));
+        background-color: $iconicBlue;
+        z-index: 1;
+    }
+    &:hover{
+        &:before{
+            z-index: 0;
+        }
+        &:after{
+            @include transform(translate3d(0%, 0, 0));
+        }
+        span{
+            color: #fff;
+        }
+    }
 }
 
+
+
+
+
+//===================================
+
+//Responsive
+
+//======================================================
+
+@media screen and (max-width:$medium-screen){
+    .site-access{
+        text-align: left;
+        padding: 0px;
+    }
+}
 
