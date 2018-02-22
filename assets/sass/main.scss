@@ -54,6 +54,20 @@ a{
     cursor: pointer !important;
 }
 
+.full-container{
+    width: 100%;
+    margin: 0 auto;
+    > .row{
+        max-width: 1600px;  
+    }
+}
+
+.max-container{
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+}
+
 //===================================
 
 //Variables
@@ -187,6 +201,27 @@ $medium-only: "only screen and (min-width : #{$small-screen-up}) and (max-width 
     align-items: center;
 }
 
+@mixin flex-start{
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
 //===================================
 
 //Typography
@@ -228,26 +263,32 @@ h1{
 
 .site-header{
     width: 100%;
-    height: 124px;
+    height: 104px;
     position: relative;
     .fixed-header{
         width: 100%;
-        height: 124px;
+        height: 104px;
         position: relative;
         background-color: rgba(255,255,255,0.8);
         .header-wrap{
-            padding: 30px 0px;
+            padding: 2rem 0px;
         }
     }
+}
+
+.nav-container{
+    max-width: 1600px;
+    width: 100%;
+    padding: 0px 30px;
+    margin: 0 auto;
 }
 
 
 .navbar{
     width: 100%;
     position: relative;
-    height: 64px;
-    line-height: 64px;
-    /*border-bottom: 1px solid #dbdbdb;*/
+    height: 74px;
+    line-height: 74px;
     .main-menu{
         position: absolute;
         right: 0;
@@ -261,8 +302,10 @@ h1{
                 display: block;
                 color: $midGray;
                 cursor: pointer;
+                @include transition(color 0.2s ease-in);
                 &:hover, &:active{
-                    color: $iconicBlue;
+                    color: #000;
+                    font-weight: 500;
                 }
             }
         }
@@ -271,11 +314,13 @@ h1{
 
 .navbar, .footer-nav{
     .monogram{
-        display: inline-block;
+        float: left;
         a{
             display: block;
-            width: 64px;
-            height: 64px;
+            width: 60px;
+            height: 60px;
+            line-height: 60px;
+            margin-top: 8px;
             cursor: pointer;
             color: #fff;
             background-color: $midGray;
@@ -289,7 +334,7 @@ h1{
                 width: 100%;
                 height: 100%;
                 position: absolute;
-                background-color: $iconicBlue;
+                background-color: #000;
                 @include transition(left 0.2s cubic-bezier(.17,.67,.83,.67));
                 left: -100%;
             }
@@ -303,11 +348,11 @@ h1{
                 }
             }
             .monogram-icon{
-                font-size: 52px;
+                font-size: 48px;
                 vertical-align: middle;
                 position: relative;
                 z-index: 2;
-                @include transform(rotate(-180deg));
+                //@include transform(rotate(-180deg));
             }
         }
     }
@@ -316,6 +361,7 @@ h1{
 .footer-nav{
     .monogram{
         line-height: 56px;
+        display: none;
         a{
             width: 50px;
             height: 50px;
@@ -326,7 +372,7 @@ h1{
                 margin-bottom: 8px;
             }
             &:hover, &:active{
-                border-color: $iconicBlue;
+                border-color: #000;
             }
         }
     }
@@ -446,6 +492,7 @@ h1{
     .title{
         padding-bottom: 20px;
         h1{
+            font-size: 2.8rem;
             line-height: 1.4;
             em{
                 font-family: $mont;
@@ -455,8 +502,8 @@ h1{
         }
     }
     p{
-        font-size: 20px;
-        line-height: 40px;
+        font-size: 1.3rem;
+        line-height: 2.1;
         color: $midGray;
     }
 }
@@ -506,23 +553,28 @@ h1{
 }
 
 
-.feature-list{
+.feature-section{
     padding: 0px 20px;
     .title{
         padding-bottom: 10px;
     }
 }
 
-.item-list{
-    .component{
-        margin-bottom: 35px;
-        padding: 0px;
+.flexboxs{
+    @include flex-start;
+    .col3{
+        width: (100% / 3);
     }
-    .preview{
+}
+
+.viewbox{
+    margin-bottom: 35px;
+    padding: 0px;
+    a{
         position: relative;
         display: block;
         cursor: pointer;
-        .image{
+        .preview{
             img{
                 display: block;
             }
@@ -539,17 +591,22 @@ h1{
             cursor: pointer;
             background-color: rgba($iconicBlue, 0.7);
             @include transition(opacity 0.2s cubic-bezier(.17,.67,.83,.67));
-            .coding{
-                vertical-align: middle;
-                font-size: 80px;
-                color: #fff;
+            .overlay-title{
+                display: block;
+                width: 100%;
                 position: absolute;
                 top: 50%;
                 left: 50%;
                 @include translate(-50%, -50%);
+                h2, h3{
+                    font-size: 1.8rem;
+                    color: #fff;
+                    margin-top: 0;
+                    font-weight: 500;
+                }
             }
             .view-link{
-                display: block;
+                display: inline-block;
                 padding: 15px 2rem;
                 border: 2px solid #fff;
                 background-color: rgba(255,255,255,0.2);
@@ -559,10 +616,6 @@ h1{
                 letter-spacing: 0.4px;
                 font-weight: 500;
                 cursor: pointer;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                @include translate(-50%, -50%);
                 @include transition(color 0.2s cubic-bezier(.17,.67,.83,.67), background-color 0.2s cubic-bezier(.17,.67,.83,.67));
                 &:hover, &:active{
                     background-color: #fff;
@@ -599,18 +652,19 @@ h1{
 
 
 .notification{
-    text-align: center;
-    padding-bottom: 15px;
-    h5{
-        font-style: italic;
+    padding: 2rem 0;
+    h4, p{
+        font-size: 1.5rem;
         letter-spacing: 1px;
         color: $liteGray;
+        margin-top: 0;
     }
 }
 
 .project-content{
     .title{
         h1{
+            font-size: 2.8rem;
             color: $darkGray;
             font-weight: 500;
         }
@@ -623,6 +677,7 @@ h1{
         }
     }
     .services{
+        @include clearfix;
         li{
             list-style-type: none;
             color: $paleBlue;
@@ -653,39 +708,49 @@ h1{
 }
 
 .component{
-    padding: 30px 0px;
-}
-
-.img-holder{
-    margin-bottom: 3rem;
-    &.set-width{
-        text-align: center;
+    position: relative;
+    .displaybox{
+        margin: 1rem;
         img{
-            width: auto;
+            display: block;
         }
-    }
-    .website{
-        border: 1px solid $offWhite;
-        box-shadow: 0px 1px 3px 0px rgba(123, 131, 146, 0.2),  1px 0px 3px 0px rgba(123, 131, 146, 0.3);
-    }
-    &.last{
-        margin-bottom: 3rem;
-    }
+        &.set-width{
+            text-align: center;
+            img{
+                width: auto;
+                max-width: 100%;
+                margin: auto;
+            }
+        }
+        &.border{
+            img{
+                border: 1px solid $offWhite;
+            box-shadow: 0px 1px 3px 0px rgba(123, 131, 146, 0.2),  1px 0px 3px 0px rgba(123, 131, 146, 0.3);
+            }
+        }
+        &.last{
+            margin-bottom: 3rem;
+        }
+    }    
 }
 
-.section-body{
-    max-width: 840px;
-    margin: auto;
-    margin-bottom: 4rem;
-    h2{
-        font-size: 1.8rem;
-        color: $darkGray;
-        font-weight: 500;
-    }
-    p{
-        font-size: 1.2rem;
-        color: $midGray;
-        line-height: 1.7;
+.section-content{
+    padding: 3rem 0;
+    .body{
+        max-width: 840px;
+        width: 85%;
+        margin: auto;
+        margin-bottom: 4rem;
+        h2{
+            font-size: 1.8rem;
+            color: $darkGray;
+            font-weight: 600;
+        }
+        p{
+            font-size: 1.1rem;
+            color: $midGray;
+            line-height: 2;
+        }
     }
 }
 
@@ -755,10 +820,41 @@ h1{
 
 //======================================================
 
+@media screen and (max-width: 1400px){
+    .flexboxs .col3{
+        width: (100% / 2);
+        .viewbox{
+            padding: .5rem;
+            margin-bottom: 0px;
+        }
+    }
+
+    .lead-content{
+        padding: 0px 2rem;
+    }
+}
+
+
 @media screen and (max-width:$medium-screen){
     .site-access{
         text-align: left;
         padding: 0px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    .lead-content{
+        padding: 0;
+    }
+}
+
+@media screen and (max-width: 700px){
+    .flexboxs .col3{
+        width: 100%;
+    }
+
+    .lead-content .title h1{
+        font-size: 2.4rem;
     }
 }
 
