@@ -1,8 +1,13 @@
-// Custom JS
-// by rachel j. frazer
-
 $(document).ready(function(){
 
+    $(window).scroll(function() {
+		var scroll = $(window).scrollTop();
+		if(scroll>=150){
+		    $('#fixed').addClass('js-scroll');
+		}else{
+			$('#fixed').removeClass('js-scroll');
+		}
+    });
 
 });
 

@@ -7,6 +7,8 @@
     
     <title>Rachel J. Frazer - Portfolio</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
+
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     
     <link rel="stylesheet" href="assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="assets/css/materialize.css" type="text/css">
@@ -42,7 +44,7 @@
 </svg>
     
 
-    <header class="site-header">
+    <header id="fixed" class="site-header">
         <div class="fixed-header">
             <div class="header-wrap">
                 <div class="nav-container">
@@ -51,8 +53,8 @@
                             <a href="home.html"><svg class="icon monogram-icon"><use xlink:href="#icon-monogram"></use></svg></a>
                         </div>
                         <ul class="main-menu">
+                            <li class="item"><a href="">about me</a></li>
                             <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">download my resume</a></li>
-                            <li class="item" style="display:none"><a href="">more about me</a></li>
                         </ul>
                     </nav>
                 </div>
@@ -62,15 +64,17 @@
     
     <div class="site-wrapper">
         <main class="main-content">
-            <div class="main-wrapper extra-margin">
+            <div class="section-wrapper extra-margin">
                 <div class="container">
                     <div class="row">
-                        <div class="col s12 m12 l11">
-                            <div class="lead-content">
-                                <div class="title">
-                                    <h1><b>Hello,</b> my name is <em>Rachel J. Frazer</em></h1>
+                        <div class="col s12">
+                            <div class="content">
+                                <div class="content-wrap">
+                                    <div class="title">
+                                        <h1><b>Hello,</b> my name is <em>Rachel J. Frazer</em></h1>
+                                    </div>
+                                    <p>I am designer who has gained 2+ years of on-the-job experience in frontend development. My passion for digital design has fueled me to pursue new development languages, push my technical boundaries, and stay up-to-date on relevant design trends. I have always appreciated that things are always changing, the need to adapt will be constant, which means the opportunity to expand ones knowledge.</p>
                                 </div>
-                                <p>I am designer who has gained 2+ years of on-the-job experience in frontend development. My passion for digital design has fueled me to pursue new development languages, push my technical boundaries, and stay up-to-date on relevant design trends. I have always appreciated that things are always changing, the need to adapt will be constant, which means the opportunity to expand ones knowledge.</p>
                             </div>
                         </div>
                     </div>
@@ -78,143 +82,114 @@
             </div>
         </main>
 
-        <section class="featured">
-            <div class="main-wrapper">
-                <div class="wide-container">
-                    <div class="feature-section">
-                        <div class="title"><h2 class="minicaps">Featured Work</h2></div>
-                        <div class="items flexboxs">
-                            <div class="flex col3 col2">
-                                <div class="viewbox">
-                                    <a href="innovative.html" class=
+        <section class="portfolio-work">
+            <div class="section-wrapper">
+                <div class="full-container">
+                    <div class="row feature-section">
+                        <div class="items floatboxs">
+                            <div class="col2 work-thumb">
+                                <a href="innovative.html" class=
                                     "highlight">
-                                        <div class="preview"><img src="assets/images/innovative_preview.jpg" alt="Innovative Dental Preview"></div>
-                                        <div class="overlay">
-                                            <div class="overlay-title">
-                                                <h3>Innovative Dental</h3>
-                                                <div class="view-link">View Project</div>
-                                            </div>
+                                    <div class="preview"><img src="assets/images/innovative2_preview.jpg" alt="Innovative Dental Preview"></div>
+                                    <div class="overlay">
+                                        <div class="overlay-title">
+                                            <h3>Innovative Dental</h3>
+                                            <div class="view-link">View Project</div>
                                         </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="flex col3 col2">
-                                <div class="viewbox">
-                                    <a href="bibboards.html" class="highlight">
-                                        <div class="preview"><img src="assets/images/bibboards_preview.jpg" alt="Bibboard Preview"></div>
-                                        <div class="overlay">
-                                            <div class="overlay-title">
-                                                <h3>Bibboards</h3>
-                                                <div class="view-link">View Project</div>
-                                            </div>
+                            <div class="col2 work-thumb">
+                                <a href="bibboards.html" class="highlight">
+                                    <div class="preview"><img src="assets/images/bibboards2_preview.jpg" alt="Bibboard Preview"></div>
+                                    <div class="overlay">
+                                        <div class="overlay-title">
+                                            <h3>Bibboards</h3>
+                                            <div class="view-link">View Project</div>
                                         </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="flex col3 col2">
-                                <div class="viewbox">
-                                    <a href="epicbanners.html" class="highlight">
-                                        <div class="preview">
-                                            <img src="assets/images/banner_img_preview.jpg" alt="Epic Banner Preivew">
+                            <div class="col2 work-thumb">
+                                <a href="epicbanners.html" class="highlight">
+                                    <div class="preview">
+                                        <img src="assets/images/epicbanners_preview.jpg" alt="Epic Banner Preivew">
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="overlay-title">
+                                            <h3>Epic Watch Bands (Banners)</h3>
+                                            <div class="view-link">View Project</div>
                                         </div>
-                                        <div class="overlay">
-                                             <div class="overlay-title">
-                                                <h3>Epic Watch Bands (Banners)</h3>
-                                                <div class="view-link">View Project</div>
-                                             </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="flex col3 col2">
-                                <div class="viewbox">
-                                    <a href="jack-king.html" class="highlight">
-                                        <div class="preview">
-                                            <img src="assets/images/jackking_preview.jpg" alt="Epic Banner Preivew">
+                            <div class="col2 work-thumb">
+                                <a href="jack-king.html" class="highlight">
+                                    <div class="preview">
+                                        <img src="assets/images/jackking2_preview.jpg" alt="Epic Banner Preivew">
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="overlay-title">
+                                            <h3>Jack &amp; King's</h3>
+                                            <div class="view-link">View Project</div>
                                         </div>
-                                        <div class="overlay">
-                                            <div class="overlay-title">
-                                                <h3>Jack &amp; King's</h3>
-                                                <div class="view-link">View Project</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="flex col3 col2">
-                                <div class="viewbox">
-                                    <a href="lazysauce.html" class="highlight">
-                                        <div class="preview">
-                                            <img src="assets/images/lazysauce_preview.jpg" alt="Epic Banner Preivew">
+                            <div class="col2 work-thumb">
+                                <a href="lazysauce.html" class="highlight">
+                                    <div class="preview">
+                                        <img src="assets/images/lazysauce2_preview.jpg" alt="LazySauce Logo Preivew">
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="overlay-title">
+                                            <h3>Lazy Sauce</h3>
+                                            <div class="view-link">View Project</div>
                                         </div>
-                                        <div class="overlay">
-                                            <div class="overlay-title">
-                                                <h3>Lazy Sauce</h3>
-                                                <div class="view-link">View Project</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
-                            <div class="flex col3 col2">
-                                <div class="viewbox">
-                                    <a href="lazysauce.html" class="highlight">
-                                        <div class="preview">
-                                            <img src="assets/images/lazysauce_preview.jpg" alt="Epic Banner Preivew">
+                            <div class="col2 work-thumb">
+                                <a href="yuguofarms.html" class="highlight">
+                                    <div class="preview">
+                                        <img src="assets/images/yuguofarms2_preview.jpg" alt="Yuguo Farms Preview">
+                                    </div>
+                                    <div class="overlay">
+                                        <div class="overlay-title">
+                                            <h3>Yuguo Farms</h3>
+                                            <div class="view-link">View Project</div>
                                         </div>
-                                        <div class="overlay">
-                                            <div class="overlay-title">
-                                                <h3>Lazy Sauce</h3>
-                                                <div class="view-link">View Project</div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
-        <section class="notice">
-            <div class="min-wrapper">
-                <div class="container">
-                    <div class"row">
-                        <div class="col s12">
-                            <div class="notification">
-                                <h4>Thank you for viewing my portfolio, always more pieces to come!</h4>
-                                <p>If you wish to contact me please do so through email.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
     </div>
    
     <footer class="fixed-footer">
-        <div class="min-wrapper">
+        <div class="section-wrapper">
             <div class="container">
                 <nav class="footer-nav">
-                    <div class="top-nav">
-                        <div class="monogram">
-                            <a href="home.html"><svg class="icon monogram-icon"><use xlink:href="#icon-monogram"></use></svg></a>
-                        </div>
-                        <div class="main-footer-nav">
-                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">download my resume</a></li>
-                            <li class="item" style="display:none"><a href="">more about me</a></li>
-                            <li class="item"><a href="mailto:racheljfrazer@gmail.com">Email</a></li>
-                            <li class="item"><a href="www.linkedin.com/in/rachel-frazer-488032b4">Linkedin</a></li>
+                    <div class="top-footer">
+                        <div class="note">
+                            <h2>Thank you for viewing my portfolio, always more pieces to come!</h2>
+                            <p>If you wish to contact me please do so through email.</p>
                         </div>
                     </div>
-                    <div class="bottom-nav">
+                    <div class="main-footer-nav">
+                        <li class="item" style="display:none"><a href="">more about me</a></li>
+                        <li class="item"><a href="mailto:racheljfrazer@gmail.com">Email</a></li>
+                        <li class="item"><a href="www.linkedin.com/in/rachel-frazer-488032b4">Linkedin</a></li>
                         <li class="item copyright">Last Updated 02/2018 &amp; Created by me</li>
                     </div>
                 </nav>
             </div>
         </div>
     </footer>
+
+
 </body>   
 </html>
