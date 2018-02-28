@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
     
-    <title>Rachel J. Frazer - Portfolio</title>
+    <title>Rachel J. Frazer | Personal Portfolio</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     
     <link rel="stylesheet" href="assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="assets/css/materialize.css" type="text/css">
+
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +50,7 @@
 </svg>
     
 
-    <header class="site-header">
+    <header id="fixed" class="site-header">
         <div class="fixed-header">
             <div class="header-wrap">
                 <div class="nav-container">
@@ -54,33 +59,52 @@
                             <a href="home.html"><svg class="icon monogram-icon"><use xlink:href="#icon-monogram"></use></svg></a>
                         </div>
                         <ul class="main-menu">
-                            <li class="item"><a href="">about me</a></li>
-                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">download my resume</a></li>
+                            <li class="item"><a href="home.html">Select Work</a></li>
+                            <li class="item"><a href="">About Me</a></li>
+                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">My Resume</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="pagination" style="display:none;">
+        <div class="previous">
+            <div class="sidebar">
+                <a href="">Previous</a>
+            </div>
+        </div>
+        <div class="forward">
+            <div class="sidebar">
+                <a href="">Forward</a>
+            </div>
+        </div>
+    </div>
     
     <div class="site-wrapper">
         <main class="main-content">
-            <div class="main-wrapper extra-margin">
+            <div class="section-wrapper extra-margin">
                 <div class="container">
                     <div class="row">
-                        <div class="col s12 l11">
-                            <div class="project-content">
-                                <div class="title">
-                                    <h1>LazySauce</h1>
-                                </div>
-                                <div class="summary">
-                                    <p>LazySauce is an analytics marketing tool that records attributes and revenue from users. It than builds out reports based on the users clicks to show things like users country, browser they are on, device they are on, and so forth. This logo redesign was just something that I worked on a side project for fun to pitch to my company. The goal was to redesign the logo and make it more versatile than the original. I started by brainstorming the essence of the company and than went into sketching out what came to mind.</p>
-                                </div>
-                                <div class="services spacing">
-                                    <li>Branding</li>
-                                    <li>Illustrator</li>
-                                    <li>Photoshop</li>
-                                    <li>Logo</li>
+                        <div class="col s12">
+                            <div class="content">
+                                <div class="content-wrap project-content">
+                                    <div class="title">
+                                        <h1>LazySauce</h1>
+                                        <h2>
+                                            Branding
+                                            <span>.</span>
+                                            Illustrator
+                                            <span>.</span>
+                                            Photoshop
+                                            <span>.</span>
+                                            Logo
+                                        </h2>
+                                    </div>
+                                    <div class="summary">
+                                        <p>LazySauce is an analytics marketing tool that records attributes and revenue from users. It than builds out reports based on the users clicks to show things like users country, browser they are on, device they are on, and so forth. My goal with this redesign was to update the logo and make it more versatile than the original. I started out by sketching than vectoring my designs. Finally I built out a showcase to display my favorite logos and my thought process behind them.</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -90,89 +114,33 @@
         </main>
         
         <section class="project">
-            <div class="full-container">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/lazysauce/handdrawings1.jpg" alt="LazySauce Logo Redesign">
-                            </div>
-                        </div>
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/lazysauce/Logo-Redesign-type.jpg" alt="LazySauce Logo Redesign">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12 m6">
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/lazysauce/LS-BusinessCard.jpg" alt="LazySauce Logo Redesign">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col s12 m6">
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/lazysauce/LS-BusinessCard2.jpg" alt="LazySauce Logo Redesign">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="section-content">
-                            <div class="body">
-                                <h2>My Mind Set</h2>
-                                <p>Through brainstorming and sketching I kind of decided that I wanted to do a combination of marketing graphics with an updated version of the splat or a fun twist on a mouse icon. Since the company was about monitoring users click actions and storing that data into graphs. Moving into Illustrator and I started vectoring out the drawings that I liked the most and was inline with my vision. Also played with different font families to see which would work best with the new logos.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/lazysauce/BusinessCardShift-LSC.jpg" alt="Lazy Sauce Logo Redesign">
-                            </div>
-                        </div>
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/lazysauce/BusinessCardShift-LSM.jpg" alt="Lazy Sauce Logo Redesign">
-                            </div>
-                        </div>
-                        <div class="component">
-                            <div class="displaybox set-width border">
-                                <img src="assets/images/lazysauce/LS-logoShowcase.jpg" alt="Lazy Sauce Logo Redesign">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="section-content">
-                            <div class="body">
-                                <h2>The Conclusion</h2>
-                                <p>To showcase the new logos I wanted to display them on business card and a design brief to show to my company. I want to show them my thought process, my reasoning behind it and what came of it. They really appreciated the work I put in and the ideas that I came up with. The plan was to move forward with the designs after a few edits and do a launch when the marketing tool was more finished. Sadly that never came to fruition but I had a lot of fun sketching out my ideas and bring the whole thing to life.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="breadcrumbs">
-            <div class="min-wrapper">
-                <div class="container">
-                    <div class="pagination">
-                        <div class="previous">
-                            <a href=""><svg class="icon icon-previous"><use xlink:href="#icon-previous"></use></svg> Back to Home</a>
-                        </div>
-                        <div class="forward">
-                            <a href="">Next Project <svg class="icon icon-forward"><use xlink:href="#icon-forward"></use></svg></a>
-                        </div>
+            <div class="section-wrapper">
+                <div class="full-container">
+                    <div class="project-image-wrapper">
+                        <figure class="displaybox">
+                            <img src="assets/images/lazysauce/sketching-part1.jpg" alt="LazySauce Logo Sketching">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/lazysauce/logo_designopt.jpg" alt="LazySauce Logo Redesign">
+                        </figure>
+                        <figure="displaybox">
+                            <img src="assets/images/lazysauce/dualfinal_lslogos.jpg" alt="LazySauce Logo Redesign">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/lazysauce/BusinessCardShift-LSC.jpg" alt="Lazy Sauce Logo Redesign">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/lazysauce/BusinessCardShift-LSM.jpg" alt="Lazy Sauce Logo Redesign">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/lazysauce/logoshowcase_p1.jpg" alt="Lazy Sauce Logo Redesign">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/lazysauce/logoshowcase_p2.jpg" alt="Lazy Sauce Logo Redesign">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/lazysauce/logoshowcase_p3.jpg" alt="Lazy Sauce Logo Redesign">
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -181,21 +149,18 @@
     </div>
    
     <footer class="fixed-footer">
-        <div class="min-wrapper">
+        <div class="section-wrapper">
             <div class="container">
                 <nav class="footer-nav">
-                    <div class="top-nav">
-                        <div class="monogram">
-                            <a href="home.html"><svg class="icon monogram-icon"><use xlink:href="#icon-monogram"></use></svg></a>
-                        </div>
-                        <div class="main-footer-nav">
-                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">download my resume</a></li>
-                            <li class="item" style="display:none"><a href="">more about me</a></li>
-                            <li class="item"><a href="mailto:racheljfrazer@gmail.com">Email</a></li>
-                            <li class="item"><a href="www.linkedin.com/in/rachel-frazer-488032b4">Linkedin</a></li>
+                    <div class="top-footer">
+                        <div class="note">
+                            <h2>Thank you for viewing my portfolio, always more pieces to come!</h2>
+                            <p>If you wish to contact me please do so through email.</p>
                         </div>
                     </div>
-                    <div class="bottom-nav">
+                    <div class="main-footer-nav">
+                        <li class="item"><a href="mailto:racheljfrazer@gmail.com">Email</a></li>
+                        <li class="item"><a href="https://www.linkedin.com/in/rachel-frazer-488032b4/">Linkedin</a></li>
                         <li class="item copyright">Last Updated 02/2018 &amp; Created by me</li>
                     </div>
                 </nav>

@@ -3102,6 +3102,10 @@ nav ul a span.badge {
   font-weight: 700; }
 @font-face {
   font-family: "Montserrat";
+  src: local(Montserrat Regular), url("../fonts/montserrat/montserrat-light-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-light-webfont.woff2") format("woff");
+  font-weight: 300; }
+@font-face {
+  font-family: "Montserrat";
   src: local(Montserrat Regular), url("../fonts/montserrat/montserrat-regular-webfont.woff2") format("woff2"), url("../fonts/montserrat/montserrat-regular-webfont.woff") format("woff");
   font-weight: 400; }
 @font-face {

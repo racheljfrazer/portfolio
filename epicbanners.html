@@ -5,11 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="utf-8" />
     
-    <title>Rachel J. Frazer - Portfolio</title>
+    <title>Rachel J. Frazer | Personal Portfolio</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
+    
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
     
     <link rel="stylesheet" href="assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="assets/css/materialize.css" type="text/css">
+
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +50,7 @@
 </svg>
     
 
-    <header class="site-header">
+    <header id="fixed" class="site-header">
         <div class="fixed-header">
             <div class="header-wrap">
                 <div class="nav-container">
@@ -54,32 +59,53 @@
                             <a href="home.html"><svg class="icon monogram-icon"><use xlink:href="#icon-monogram"></use></svg></a>
                         </div>
                         <ul class="main-menu">
-                            <li class="item"><a href="">about me</a></li>
-                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">download my resume</a></li>
+                            <li class="item"><a href="home.html">Select Work</a></li>
+                            <li class="item"><a href="">About Me</a></li>
+                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">My Resume</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="breadcrumbs" style="display: none;">
+        <div class="full-container">
+            <div class="pagination">
+                <div class="previous">
+                    <div class="sidebar">
+                        <a href="">Previous</a>
+                    </div>
+                </div>
+                <div class="forward">
+                    <div class="sidebar">
+                        <a href="">Forward</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
     <div class="site-wrapper">
         <main class="main-content">
-            <div class="main-wrapper extra-margin">
+            <div class="section-wrapper extra-margin">
                 <div class="container">
                     <div class="row">
-                        <div class="col s12 l11">
-                            <div class="project-content">
-                                <div class="title">
-                                    <h1>Epic Watch Bands</h1>
-                                </div>
-                                <div class="summary">
-                                    <p>Epic watch bands is a third party Apple Watch band seller. Starting with only silicon they expanded their watch band to include different styles of leather and metal as well. To expand their online presence they wanted to take style shots to show the customization their bands offered with the Apple Watch. These images were to be use for google banner and social media at marketing collateral.</p>
-                                </div>
-                                <div class="services spacing">
-                                    <li>Photography</li>
-                                    <li>Photoshop</li>
-                                    <li>Banners</li>
+                        <div class="col s12">
+                            <div class="content">
+                                <div class="content-wrap project-content">
+                                    <div class="title">
+                                        <h1>Epic Watch Bands</h1>
+                                        <h2>
+                                            Photography
+                                            <span>.</span>
+                                            Photoshop
+                                            <span>.</span>
+                                            Banners
+                                        </h2>
+                                    </div>
+                                    <div class="summary">
+                                        <p>For Epic Watch Bands I was tasked with taking and editing photos of models wearing the company's most popular Apple Watch Bands. The images were used as Google and social media banners to help with performance marketing. The main obstacle with these shots were trying to display the bans without putting the model in an unrealistic position, so angles were key here. </p>
                                 </div>
                             </div>
                         </div>
@@ -89,78 +115,27 @@
         </main>
         
         <section class="project">
-            <div class="full-container">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/epic/coffeeshop_val_03.jpg" alt="Epic Watch Bands Banner">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="component">
-                        <div class="displaybox">
-                             <img src="assets/images/epic/coffeeshop_rach_02.jpg" alt="Epic Watch Bands Banner">
-                        </div>
-                    </div>
-                    <div class="component">
-                        <div class="displaybox">
+            <div class="section-wrapper">
+                <div class="full-container">
+                    <div class="project-image-wrapper">
+                        <figure class="displaybox">
+                            <img src="assets/images/epic/coffeeshop_val_03.jpg" alt="Epic Watch Bands Banner">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/epic/coffeeshop_rach_02.jpg" alt="Epic Watch Bands Banner">
+                        </figure>
+                        <figure class="displaybox">
                             <img src="assets/images/epic/coffeeshop_val_02.jpg" alt="Epic Watch Bands Banner">
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="section-content">
-                            <div class="body">
-                                <h2>Angles on Angles</h2>
-                                <p>The thing that made these shots difficult were trying to showcase the band over the watch. Without putting the model into an unrealistic position. Made you ponder how someone checks their watch and what was a natural position that would make the watch the center piece of the shot. With the shot there also had to be space for text to be added to the shot since the client wanted to also use the shots as hero images on the site.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/epic/leather_brwn_male2.jpg" alt="Epic Watch Bands Banner">
-                            </div>
-                        </div>
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/epic/cofeeshop_rach_01.jpg" alt="Epic Watch Bands Banner">
-                            </div>
-                        </div>
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/epic/epic_nylon_og.jpg" alt="Epic Watch Bands Banner">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col s12">
-                            <div class="section-content">
-                                <div class="body">
-                                    <h2>Final Thoughts</h2>
-                                    <p>Photography is a passion of mine so I had a lot of fun with this project. Thinking of environments to take the shots in, organizing the scene and interacting with the models. After reviewing the current photos I see new possible angles and slight changes that I would of tried out in the next photo shoot. </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="breadcrumbs">
-            <div class="min-wrapper">
-                <div class="container">
-                    <div class="pagination">
-                        <div class="previous">
-                            <a href=""><svg class="icon icon-previous"><use xlink:href="#icon-previous"></use></svg> Back to Home</a>
-                        </div>
-                        <div class="forward">
-                            <a href="">Next Project <svg class="icon icon-forward"><use xlink:href="#icon-forward"></use></svg></a>
-                        </div>
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/epic/leather_brwn_male2.jpg" alt="Epic Watch Bands Banner">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/epic/cofeeshop_rach_01.jpg" alt="Epic Watch Bands Banner">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/epic/epic_nylon_og.jpg" alt="Epic Watch Bands Banner">
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -169,21 +144,18 @@
     </div>
    
     <footer class="fixed-footer">
-        <div class="min-wrapper">
+        <div class="section-wrapper">
             <div class="container">
                 <nav class="footer-nav">
-                    <div class="top-nav">
-                        <div class="monogram">
-                            <a href="home.html"><svg class="icon monogram-icon"><use xlink:href="#icon-monogram"></use></svg></a>
-                        </div>
-                        <div class="main-footer-nav">
-                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">download my resume</a></li>
-                            <li class="item" style="display:none"><a href="">more about me</a></li>
-                            <li class="item"><a href="mailto:racheljfrazer@gmail.com">Email</a></li>
-                            <li class="item"><a href="www.linkedin.com/in/rachel-frazer-488032b4">Linkedin</a></li>
+                    <div class="top-footer">
+                        <div class="note">
+                            <h2>Thank you for viewing my portfolio, always more pieces to come!</h2>
+                            <p>If you wish to contact me please do so through email.</p>
                         </div>
                     </div>
-                    <div class="bottom-nav">
+                    <div class="main-footer-nav">
+                        <li class="item"><a href="mailto:racheljfrazer@gmail.com">Email</a></li>
+                        <li class="item"><a href="https://www.linkedin.com/in/rachel-frazer-488032b4/">Linkedin</a></li>
                         <li class="item copyright">Last Updated 02/2018 &amp; Created by me</li>
                     </div>
                 </nav>

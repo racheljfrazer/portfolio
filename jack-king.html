@@ -8,8 +8,13 @@
     <title>Rachel J. Frazer - Portfolio</title>
     <link rel="shortcut icon" type="image/x-icon" href="assets/images/favicon.png"/>
     
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+    
     <link rel="stylesheet" href="assets/css/main.css" type="text/css">
     <link rel="stylesheet" href="assets/css/materialize.css" type="text/css">
+
+    <script src="assets/js/custom.js"></script>
+    <script src="assets/js/materialize.min.js"></script>
 </head>
 
 <body>
@@ -45,7 +50,7 @@
 </svg>
     
 
-    <header class="site-header">
+    <header id="fixed" class="site-header">
         <div class="fixed-header">
             <div class="header-wrap">
                 <div class="nav-container">
@@ -54,34 +59,52 @@
                             <a href="home.html"><svg class="icon monogram-icon"><use xlink:href="#icon-monogram"></use></svg></a>
                         </div>
                         <ul class="main-menu">
-                            <li class="item" ><a href="">about me</a></li>
-                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">download my resume</a></li>
+                            <li class="item"><a href="home.html">Select Work</a></li>
+                            <li class="item"><a href="">About Me</a></li>
+                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">My Resume</a></li>
                         </ul>
                     </nav>
                 </div>
             </div>
         </div>
     </header>
+
+    <div class="pagination" style="display:none;">
+        <div class="previous">
+            <div class="sidebar">
+                <a href="">Previous</a>
+            </div>
+        </div>
+        <div class="forward">
+            <div class="sidebar">
+                <a href="">Forward</a>
+            </div>
+        </div>
+    </div>
     
     <div class="site-wrapper">
         <main class="main-content">
-            <div class="main-wrapper extra-margin">
+            <div class="section-wrapper extra-margin">
                 <div class="container">
                     <div class="row">
-                        <div class="col s12 l11">
-                            <div class="project-content">
-                                <div class="title">
-                                    <h1>Jack &amp; King's</h1>
-                                </div>
-                                <div class="summary">
-                                    <p>Jack & King's is a seafood company that specializes in frozen seasoned crawfish and lake crab. They were currently selling their products in brick and mortar shops throughout the United States but wanted to expand their presence online. They were hoping to enlist more brick and mortar shops while also gaining online B2C sales.</p>
-                                </div>
-                                <div class="services spacing">
-                                    <li>Web Design</li>
-                                    <li>Icons</li>
-                                    <li>Development</li>
-                                    <li>Responsivness</li>
-                                    <li>SEO</li>
+                        <div class="col s12">
+                            <div class="content">
+                                <div class="content-wrap project-content">
+                                    <div class="title">
+                                        <h1>Jack &amp; King's</h1>
+                                        <h2>
+                                            Web Design
+                                            <span>.</span>
+                                            Development
+                                            <span>.</span>
+                                            SEO
+                                            <span>.</span>
+                                            Responsive
+                                        </h2>
+                                    </div>
+                                    <div class="summary">
+                                        <p>Jack &amp; King's is a young seafood company that specializes in frozen seasoned crawfish and lake crab. Most of their sales were coming from brick and mortar shops but were looking to expand their presence online. With the company being young they were still developing their content and images I knew that site would expand with the company's needs so I wanted to keep the initial site design simple. Through my company, I designed and coded out a modern responsive site for them that was Search Engine Optimized (SEO).</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -91,64 +114,18 @@
         </main>
         
         <section class="project">
-            <div class="full-container">
-                <div class="row">
-                    <div class="col s12">
-                        <div class="component">
-                            <div class="displaybox border">
-                                <img src="assets/images/jack-king/J&K_home.jpg" alt="Jack &amp; King's Website">
-                            </div>
-                        </div>
-                        <div class="component">
-                            <div class="displaybox border">
-                                <img class="website" src="assets/images/jack-king/J&K_home1.jpg" alt="Jack &amp; King's Website">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="section-content">
-                            <div class="body">
-                                <h2>Design Approach</h2>
-                                <p>When designing the site I decided on for a single page design for the client. With limited content and only two products the client wasn't in need of a multiple page site. I opted for a full height hero image to best show off the client's logo and help with brand recognition with users. To match the logo I went with a nautical elements and color theme throughout the site. Between the two wireframes the client chose the second design. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="component">
-                            <div class="displaybox">
-                                <img src="assets/images/jack-king/quickview.png" alt="Jack &amp; King's product preview">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col s12">
-                        <div class="section-content">
-                            <div class="body">
-                                <h2>Product Display</h2>
-                                <p>For viewing the products I designed out a quick view modal. By clicking on the desired product you could shift through the flavors, ingredient information and shipping details. For mobile the quick view would expand to cover the full view port. Starting out this site worked seamlessly for the client but as content and products were rapidly added the site had to be adapted to accommodate everything.</p>
-                                <p>That is something that I love about we design, it is always evolving to accommodate the needs of the client or company. Though the original design is still my favorite and that is why I showcase it here.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="breadcrumbs">
-            <div class="min-wrapper">
-                <div class="container">
-                    <div class="pagination">
-                        <div class="previous">
-                            <a href=""><svg class="icon icon-previous"><use xlink:href="#icon-previous"></use></svg> Back to Home</a>
-                        </div>
-                        <div class="forward">
-                            <a href="">Next Project <svg class="icon icon-forward"><use xlink:href="#icon-forward"></use></svg></a>
-                        </div>
+            <div class="section-wrapper">
+                <div class="full-container">
+                    <div class="project-image-wrapper">
+                        <figure class="displaybox border">
+                            <img src="assets/images/jack-king/J&K_home.jpg" alt="Jack &amp; King's Website">
+                        </figure>
+                        <figure class="displaybox border">
+                            <img class="website" src="assets/images/jack-king/J&K_home1.jpg" alt="Jack &amp; King's Website">
+                        </figure>
+                        <figure class="displaybox">
+                            <img src="assets/images/jack-king/quickview.png" alt="Jack &amp; King's product preview">
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -157,21 +134,18 @@
     </div>
    
     <footer class="fixed-footer">
-        <div class="min-wrapper">
+        <div class="section-wrapper">
             <div class="container">
                 <nav class="footer-nav">
-                    <div class="top-nav">
-                        <div class="monogram">
-                            <a href="home.html"><svg class="icon monogram-icon"><use xlink:href="#icon-monogram"></use></svg></a>
-                        </div>
-                        <div class="main-footer-nav">
-                            <li class="item"><a onclick="openPDF('assets/images/Rachel_Frazer_Resume.pdf');">download my resume</a></li>
-                            <li class="item" style="display:none"><a href="">more about me</a></li>
-                            <li class="item"><a href="mailto:racheljfrazer@gmail.com">Email</a></li>
-                            <li class="item"><a href="www.linkedin.com/in/rachel-frazer-488032b4">Linkedin</a></li>
+                    <div class="top-footer">
+                        <div class="note">
+                            <h2>Thank you for viewing my portfolio, always more pieces to come!</h2>
+                            <p>If you wish to contact me please do so through email.</p>
                         </div>
                     </div>
-                    <div class="bottom-nav">
+                    <div class="main-footer-nav">
+                        <li class="item"><a href="mailto:racheljfrazer@gmail.com">Email</a></li>
+                        <li class="item"><a href="https://www.linkedin.com/in/rachel-frazer-488032b4/">Linkedin</a></li>
                         <li class="item copyright">Last Updated 02/2018 &amp; Created by me</li>
                     </div>
                 </nav>
