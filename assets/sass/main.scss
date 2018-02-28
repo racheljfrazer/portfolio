@@ -40,10 +40,10 @@ img{
     //background: #B3E4DD;
     background: #82C4CF;
   }
-  ::-moz-selection {
+::-moz-selection {
     //background: #B3E4DD; 
     background: #82C4CF;
-  }
+}
 
 .icon {
   display: inline-block;
@@ -339,10 +339,33 @@ h1{
     position: absolute;
     top: 0;
     right: 0;
-    .mobile-menu{
-        width: 54px;
-        height: 74px;
-        
+    .mobile-nav{
+        width: 52px;
+        height: 52px;
+        position: relative;
+        display: block;
+        .hamburger{
+            position: absolute;
+            display: inline-block;
+            width: 40px;
+            height: 3px;
+            background-color: #000;
+            top: 50%;
+            left: 0;
+            &:before, &:after{
+                content: '';
+                display: block;
+                background-color: #000;
+                height: 3px;
+                position: relative;
+            }
+            &:before{
+                top: -10px;
+            }
+            &:after{
+                top: 8px;
+            }
+        }
     }
 }
 
@@ -847,17 +870,23 @@ h1{
     }
 }
 
-@media screen and (max-width: 1400px){
-    .flexboxs .col3{
-        width: (100% / 2);
-        .viewbox{
-            padding: .5rem;
-            margin-bottom: 0px;
+@media screen and (max-width: 900px){
+    .work-thumb{
+        padding-bottom: 2rem;
+        &:nth-of-type(odd){
+            padding-right: 1rem;
+        }
+        &:nth-of-type(even){
+            padding-left: 1rem;
         }
     }
 
-    .lead-content{
-        padding: 0px 2rem;
+    .content{
+        padding: 0;
+    }
+
+    .container{
+        width: 100% !important;
     }
 
 }
@@ -871,13 +900,6 @@ h1{
 }
 
 @media screen and (max-width: 768px){
-    .content{
-        padding: 0;
-    }
-
-    .container{
-        width: 100% !important;
-    }
 
     .section-wrapper{
         padding: 0 2rem;
@@ -901,16 +923,6 @@ h1{
 
     .content-wrap .title h1{
         text-align: left;
-    }
-
-    .work-thumb{
-        padding-bottom: 2rem;
-        &:nth-of-type(odd){
-            padding-right: 1rem;
-        }
-        &:nth-of-type(even){
-            padding-left: 1rem;
-        }
     }
 
 }
