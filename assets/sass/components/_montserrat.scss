@@ -1,0 +1,65 @@
+@font-face {
+    font-family: "Montserrat";
+    src: local(Montserrat Regular),
+        url("#{$mont-font-path}montserrat-light-webfont.woff2") format("woff2"),
+        url("#{$mont-font-path}montserrat-light-webfont.woff2") format("woff");
+
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local(Montserrat Regular),
+        url("#{$mont-font-path}montserrat-regular-webfont.woff2") format("woff2"),
+        url("#{$mont-font-path}montserrat-regular-webfont.woff") format("woff");
+
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local(Montserrat Regular Italic),
+        url("#{$mont-font-path}montserrat-italic-webfont.woff2") format("woff2"),
+        url("#{$mont-font-path}montserrat-italic-webfont.woff") format("woff");
+
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local(Montserrat Medium),
+        url("#{$mont-font-path}montserrat-medium-webfont.woff2") format("woff2"),
+        url("#{$mont-font-path}montserrat-medium-webfont.woff") format("woff");
+
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local(Montserrat Medium Italic),
+        url("#{$mont-font-path}montserrat-mediumitalic-webfont.woff2") format("woff2"),
+        url("#{$mont-font-path}montserrat-mediumitalic-webfont.woff") format("woff");
+
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local(Montserrat Semibold),
+        url("#{$mont-font-path}montserrat-semibold-webfont.woff2") format("woff2"),
+        url("#{$mont-font-path}montserrat-semibold-webfont.woff") format("woff");
+
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Montserrat";
+    src: local(Montserrat Semibold Italic),
+        url("#{$mont-font-path}montserrat-semibolditalic-webfont.woff2") format("woff2"),
+        url("#{$mont-font-path}montserrat-semibolditalic-webfont.woff") format("woff");
+
+    font-weight: 600;
+    font-style: italic;
+}

@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "Work Sans";
+    src: local(Work Sans Thin),
+        url("#{$work-font-path}worksans-thin-webfont.woff2") format("woff2"),
+        url("#{$work-font-path}worksans-thin-webfont.woff") format("woff");
+
+    font-weight: 100;
+}
+@font-face {
+    font-family: "Work Sans";
+    src: local(Work Sans Light),
+        url("#{$work-font-path}worksans-light-webfont.woff2") format("woff2"),
+        url("#{$work-font-path}worksans-light-webfont.woff") format("woff");
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: local(Work Sans Regular), 
+        url("#{$work-font-path}worksans-regular-webfont.woff2") format("woff2"),
+        url("#{$work-font-path}worksans-regular-webfont.woff") format("woff");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: local(Work Sans Medium),
+        url("#{$work-font-path}worksans-medium-webfont.woff2") format("woff2"),
+        url("#{$work-font-path}worksans-medium-webfont.woff") format("woff");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: local(Work Sans Semibold),
+        url("#{$work-font-path}worksans-semibold-webfont.woff2") format("woff2"),
+        url("#{$work-font-path}worksans-semibold-webfont.woff") format("woff");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Work Sans";
+    src: local(Work Sans Semibold),
+        url("#{$work-font-path}worksans-bold-webfont.woff2") format("woff2"),
+        url("#{$work-font-path}worksans-bold-webfont.woff") format("woff");
+    font-weight: 700;
+}
