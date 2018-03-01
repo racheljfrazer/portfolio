@@ -7,7 +7,16 @@ $(document).ready(function(){
 		}else{
 			$('#fixed').removeClass('js-scroll');
 		}
-    });
+	});
+	
+	$('#mobileNav').click(function(e){
+		e.preventDefault();
+		if(!$('.navbar').hasClass('open-menu')){
+			$('.navbar').addClass('open-menu');
+		} else {
+			$('.navbar').removeClass('open-menu');
+		}
+	});
 
 });
 

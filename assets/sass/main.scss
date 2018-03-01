@@ -318,6 +318,7 @@ h1{
         top: 0;
         height: 100%;
         margin: 0;
+        @include transition(height 0.2s, opacity 0.2s);
         li{
             display: inline-block;
             padding-left: 2rem;
@@ -339,6 +340,8 @@ h1{
     position: absolute;
     top: 0;
     right: 0;
+    z-index: 5;
+    display: none;
     .mobile-nav{
         width: 52px;
         height: 52px;
@@ -347,17 +350,18 @@ h1{
         .hamburger{
             position: absolute;
             display: inline-block;
-            width: 30px;
+            width: 32px;
             height: 3px;
             background-color: #000;
             top: 50%;
-            left: 0;
+            left: 15%;
             &:before, &:after{
                 content: '';
                 display: block;
                 background-color: #000;
                 height: 3px;
                 position: relative;
+                @include transition(transform 0.1s, top 0.1s);
             }
             &:before{
                 top: -10px;
@@ -365,6 +369,28 @@ h1{
             &:after{
                 top: 8px;
             }
+        }
+    }
+}
+
+.navbar{
+    &.open-menu{
+        .mobile-menu .mobile-nav .hamburger{
+            background-color: transparent;
+            &:before{
+                top: 0;
+                @include transform(rotate(45deg));
+            }
+            &:after{
+                top: -2px;
+                @include transform(rotate(-45deg));
+            }
+        }
+        .main-menu{
+            height: 194px;
+            opacity: 1;
+            visibility: visible;
+            margin-top: 2rem;
         }
     }
 }
@@ -855,6 +881,16 @@ h1{
 }
 
 
+.floatboxes{
+    @include clearfix;
+    .boxes{
+        float: left;
+        width: 50%;
+        figure{
+            margin: 0;
+        }
+    }
+}
 
 
 
@@ -928,6 +964,45 @@ h1{
 }
 
 @media screen and (max-width: 600px){
+    .site-header{
+        height: auto;
+    }
+
+    .site-header .fixed-header{
+        position: relative;
+        height: auto;
+    }
+    .navbar{
+        height: auto;
+        line-height: 52px;
+    }
+
+    .navbar .monogram{
+        float: none;
+        a{
+            margin-top: 0px;
+        }
+    }
+
+    .navbar .main-menu{
+        position: relative;
+        height: 1px;
+        visibility: hidden;
+        opacity: 0;
+        border-top: 1px solid #ddd;
+        border-bottom: 1px solid #ddd;
+        li{
+            display: block;
+            text-align: right;
+            line-height: 64px;
+            padding: 0 0.5rem;
+        }
+    }
+
+    .mobile-menu{
+        display: block;
+    }
+
     .project-content .title h1{
         font-size: 2.6rem;
     }
@@ -942,6 +1017,62 @@ h1{
 
     .footer-nav{
         padding: 0 1rem;
+        text-align: left;
+    }
+
+    .footer-nav .item{
+        padding-bottom: 1rem;
+    }
+
+    .footer-nav .item.copyright{
+        display: block;
+        padding: 0;
+    }
+
+    .work-thumb{
+        width: 100%;
+        float: none;
+        &:nth-of-type(odd){
+            padding-right: 0;
+        }
+        &:nth-of-type(even){
+            padding-left: 0;
+        }
+    }
+
+    .project-image-wrapper figure{
+        margin: 2rem 0;
+    }
+
+}
+
+@media screen and (max-width: 450px){
+    .content-wrap .title h1 {
+        font-size: 2.8rem;
+        b{
+            font-size: 3.2rem;
+        }
+    }
+
+    .project-content .title h1{
+        font-size: 2.5rem;
+        margin-top: 0;
+    }
+
+    .project-content .summary p{
+        font-size: 1.05rem;
+    }
+
+    .content-wrap p{
+        font-size: 1.1rem;
+    }
+
+    .footer-nav .item.copyright{
+        font-size: 12px;
+    }
+
+    .footer-nav{
+        padding: 0;
     }
 }
 

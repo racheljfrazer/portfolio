@@ -94,7 +94,11 @@ h1 {
     right: 0;
     top: 0;
     height: 100%;
-    margin: 0; }
+    margin: 0;
+    -moz-transition: height 0.2s, opacity 0.2s;
+    -o-transition: height 0.2s, opacity 0.2s;
+    -webkit-transition: height 0.2s, opacity 0.2s;
+    transition: height 0.2s, opacity 0.2s; }
     .navbar .main-menu li {
       display: inline-block;
       padding-left: 2rem; }
@@ -113,7 +117,9 @@ h1 {
 .mobile-menu {
   position: absolute;
   top: 0;
-  right: 0; }
+  right: 0;
+  z-index: 5;
+  display: none; }
   .mobile-menu .mobile-nav {
     width: 52px;
     height: 52px;
@@ -122,21 +128,47 @@ h1 {
     .mobile-menu .mobile-nav .hamburger {
       position: absolute;
       display: inline-block;
-      width: 30px;
+      width: 32px;
       height: 3px;
       background-color: #000;
       top: 50%;
-      left: 0; }
+      left: 15%; }
       .mobile-menu .mobile-nav .hamburger:before, .mobile-menu .mobile-nav .hamburger:after {
         content: '';
         display: block;
         background-color: #000;
         height: 3px;
-        position: relative; }
+        position: relative;
+        -moz-transition: transform 0.1s, top 0.1s;
+        -o-transition: transform 0.1s, top 0.1s;
+        -webkit-transition: transform 0.1s, top 0.1s;
+        transition: transform 0.1s, top 0.1s; }
       .mobile-menu .mobile-nav .hamburger:before {
         top: -10px; }
       .mobile-menu .mobile-nav .hamburger:after {
         top: 8px; }
+
+.navbar.open-menu .mobile-menu .mobile-nav .hamburger {
+  background-color: transparent; }
+  .navbar.open-menu .mobile-menu .mobile-nav .hamburger:before {
+    top: 0;
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  .navbar.open-menu .mobile-menu .mobile-nav .hamburger:after {
+    top: -2px;
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+.navbar.open-menu .main-menu {
+  height: 194px;
+  opacity: 1;
+  visibility: visible;
+  margin-top: 2rem; }
 
 .navbar .monogram, .footer-nav .monogram {
   float: left; }
@@ -577,6 +609,18 @@ h1 {
   .outline-btn:hover span {
     color: #fff; }
 
+.floatboxes:after {
+  content: '';
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden; }
+.floatboxes .boxes {
+  float: left;
+  width: 50%; }
+  .floatboxes .boxes figure {
+    margin: 0; }
+
 @media screen and (min-width: 1520px) {
   .nav-container {
     margin: 0 auto; } }
@@ -616,6 +660,38 @@ h1 {
   .content-wrap .title h1 {
     text-align: left; } }
 @media screen and (max-width: 600px) {
+  .site-header {
+    height: auto; }
+
+  .site-header .fixed-header {
+    position: relative;
+    height: auto; }
+
+  .navbar {
+    height: auto;
+    line-height: 52px; }
+
+  .navbar .monogram {
+    float: none; }
+    .navbar .monogram a {
+      margin-top: 0px; }
+
+  .navbar .main-menu {
+    position: relative;
+    height: 1px;
+    visibility: hidden;
+    opacity: 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd; }
+    .navbar .main-menu li {
+      display: block;
+      text-align: right;
+      line-height: 64px;
+      padding: 0 0.5rem; }
+
+  .mobile-menu {
+    display: block; }
+
   .project-content .title h1 {
     font-size: 2.6rem; }
 
@@ -626,6 +702,46 @@ h1 {
     font-size: 1.15rem; }
 
   .footer-nav {
-    padding: 0 1rem; } }
+    padding: 0 1rem;
+    text-align: left; }
+
+  .footer-nav .item {
+    padding-bottom: 1rem; }
+
+  .footer-nav .item.copyright {
+    display: block;
+    padding: 0; }
+
+  .work-thumb {
+    width: 100%;
+    float: none; }
+    .work-thumb:nth-of-type(odd) {
+      padding-right: 0; }
+    .work-thumb:nth-of-type(even) {
+      padding-left: 0; }
+
+  .project-image-wrapper figure {
+    margin: 2rem 0; } }
+@media screen and (max-width: 450px) {
+  .content-wrap .title h1 {
+    font-size: 2.8rem; }
+    .content-wrap .title h1 b {
+      font-size: 3.2rem; }
+
+  .project-content .title h1 {
+    font-size: 2.5rem;
+    margin-top: 0; }
+
+  .project-content .summary p {
+    font-size: 1.05rem; }
+
+  .content-wrap p {
+    font-size: 1.1rem; }
+
+  .footer-nav .item.copyright {
+    font-size: 12px; }
+
+  .footer-nav {
+    padding: 0; } }
 
 /*# sourceMappingURL=main.css.map */
