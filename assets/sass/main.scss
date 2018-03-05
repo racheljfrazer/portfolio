@@ -90,6 +90,7 @@ $offWhite: rgb(240,243,246);
 $liteGray: rgb(170,179,194);
 $midGray: rgb(123,131,145);
 $darkGray: rgb(64,69,79);
+$iceBlue: #82C4CF;
 
 $mont: "Montserrat", Helvetica, san-serif;
 
@@ -545,6 +546,15 @@ h1{
 }
 
 
+.inline-link{
+    font-weight: 500;
+    color: #000;
+    @include transition(color 0.2s);
+    &:hover{
+        color: $iceBlue;
+    }
+}
+
 
 //===================================
 
@@ -575,7 +585,7 @@ h1{
 }
 
 .content-wrap{
-    max-width: 1050px;
+    max-width: 1030px;
     margin: auto;
     padding-bottom: 2rem;
     text-align: center;
