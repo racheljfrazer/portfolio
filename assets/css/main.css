@@ -303,6 +303,16 @@ h1 {
     left: -46px;
     text-align: right; }
 
+.inline-link {
+  font-weight: 500;
+  color: #000;
+  -moz-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s; }
+  .inline-link:hover {
+    color: #82C4CF; }
+
 .extra-margin {
   margin-top: 3rem; }
 
@@ -320,7 +330,7 @@ h1 {
   padding: 2rem 0px; }
 
 .content-wrap {
-  max-width: 1050px;
+  max-width: 1030px;
   margin: auto;
   padding-bottom: 2rem;
   text-align: center; }
