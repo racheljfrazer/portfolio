@@ -610,6 +610,7 @@ h1{
         line-height: 1.8;
         color: #1a1a1a;
         text-align: center;
+        font-weight: 300;
     }
 }
 
@@ -760,7 +761,7 @@ h1{
             color: $midGray;
             text-transform: uppercase;
             letter-spacing: 0.6px;
-            font-weight: 500;
+            font-weight: 400;
             line-height: 1.4;
             span{
                 display: inline-block;
